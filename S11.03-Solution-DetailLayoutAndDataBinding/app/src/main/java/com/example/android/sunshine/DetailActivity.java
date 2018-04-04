@@ -293,6 +293,9 @@ public class DetailActivity extends AppCompatActivity implements
         /* Set the content description on the weather image (for accessibility purposes) */
         mDetailBinding.primaryInfo.weatherIcon.setContentDescription(descriptionA11y);
 
+        double highInCelsius = data.getDouble(INDEX_WEATHER_MAX_TEMP);
+        String highString = SunshineWeatherUtils.formatTemperature(this, highInCelsius);
+
         /**************************
          * High (max) temperature *
          **************************/
